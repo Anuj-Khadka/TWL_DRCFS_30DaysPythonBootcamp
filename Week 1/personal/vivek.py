@@ -1,76 +1,66 @@
-# Scissors, paper, rock 
+# #   Number guesser
 
 # import random
+# random_number = random.randint(1, 10)
 
-# print("1. rock, 2. paper, 3. scissors")
+# player_name = input('Enter a name: ')
+# print(player_name)
 
-# i=0
-# while i<=4:
-#     selection = int(input('Enter user throw: '))
+# i = 0
+# while i <= 4:
+#     guess = int(input('Enter a number between 1 to 10: '))
+#     if guess == random_number:
+#         print(f'{player_name} guess is right in {i+1} times')
+#         break
 
-#     if (selection == 1):
-#         user_throw= "Rock"
-#     elif selection == 2:
-#         user_throw="Paper"
-#     elif selection == 3: 
-#         user_throw = "Scissors"
+#     elif guess > random_number:
+#         print('guess a smaller number')
 
-#     print('Player Throws', user_throw)
+#     elif guess < random_number:
+#         print("guess a bigger number")
 
-#     throws= ["Rock", "Paper","Scissors"]
-#     comp_throw = random.choice(throws)
+#     i = i+1
 
-#     print('Computer throws', comp_throw)
 
-#     if user_throw == comp_throw:
-#         print("Tie Game")
 
-#     elif user_throw == "Rock":
-#         if comp_throw == "Paper":
-#             print("Comp Wins")
-#         elif comp_throw == "Scissors":
-#             print("Player Wins")
-
-#     elif user_throw == "Paper":
-#         if comp_throw == "Scissors":
-#             print("Comp Wins")
-#         elif (comp_throw == "Rock"):
-#             print("Player Wins")
-
-#     elif user_throw == "Scissors":
-#         if comp_throw == "Rock":
-#             print("Comp Wins")
-#         elif (comp_throw == "Paper"):
-#             print("Player Wins")
-    
-#     i = i + 1
-    
-  
-################################################################################################
-
-#   Number guesser
+     
+# Rock, Paper, Scissors 
 
 import random
-random_number = random.randint(1, 10)
+i = 0
+while i <= 4:
+    selection = int(input('Enter user throw: '))
 
-player_name = input('Enter a name: ')
-print(player_name)
+    if (selection == 1):
+        user_throw= "Rock"
+    elif selection == 2:
+        user_throw="Paper"
+    elif selection == 3: 
+        user_throw = "Scissors"
 
-# as the "i" term has a purpose, try using some meaningful variable like "chance" or so
-i = 1
-while i <= 5:
-    guess = int(input('Enter a number between 1 to 10 -> '))
-    if guess == random_number:
-        print(f'{player_name} guessed the number. \nYour guess is right in {i} times')
-        break
+    print('Player Throws', user_throw)
 
-    elif guess > random_number:
-        print('guess a smaller number')
+    throws = ["Rock", "Paper","Scissors"]
+    comp_throw = random.choice(throws)
 
-    elif guess < random_number:
-        print("guess a bigger number")
+    print('Computer throws', comp_throw)
 
-    print(f'{5-i} chances remains')
-
-    i = i+1
-
+    if user_throw == comp_throw:
+        print("Tie Game")
+    elif user_throw == "Rock":
+        if comp_throw == "Paper":
+            print("Comp Wins")
+        elif comp_throw == "Scissors":
+            print("Player Wins")
+    elif user_throw == "Paper":
+        if comp_throw == "Scissors":
+            print("Comp Wins")
+        elif (comp_throw == "Rock"):
+            print("Player Wins")
+    elif user_throw == "Scissors":
+        if comp_throw == "Rock":
+            print("Comp Wins")
+        elif (comp_throw == "Paper"):
+            print("Player Wins")
+    
+    i = i + 1
